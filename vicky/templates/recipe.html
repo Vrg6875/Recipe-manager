@@ -1,0 +1,43 @@
+{% if messages %}
+<ul class="messages error">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+
+
+{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body class="vrg">
+    <div class="container">
+        <h1>Recipe Form</h1>
+        <form method="post" action=# enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="recipe_name">Recipee Name:</label>
+                <input type="text" id="recipe_name" name="recipe_name" placeholder="Enter recipe name" required>
+            </div>
+            <div class="form-group">
+                <label for="recipe_des">Recipe Description:</label>
+                <input type="text" id="recipe_des" name="recipe_des" placeholder="Enter description" required>
+            </div>
+            <div class="form-group">
+                <label for="recipe_image">Select Image:</label>
+                <input type="file" id="recipe_image" name="recipe_image" accept="image/*" required>
+            </div>
+            <p>all recipe here you can check <a href="/details/">click</a></p> 
+            <br>
+            <button type="submit">Submit Recipe</button>
+        
+        </form>
+    </div>
+</body>
+</html>

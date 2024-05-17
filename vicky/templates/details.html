@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>details</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'vrg.css' %}">
+</head>
+<body>
+    
+    <form method="POST">
+        {% csrf_token %}
+        
+<div>
+    <label>search recipe</label>
+    <input type="text" name="recipename" placeholder="search recipe"/>
+    <br>
+    <br>
+    <input type="submit" value="search recipe name"/>
+</div>
+    </form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Recipe name</th>
+            <th>Recipe description</th>
+            <th>recipe image</th>
+           
+
+          
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in recipedata %}
+            <tr>
+               
+                <td>{{ i.recipe_name }}</td>
+                 
+                <td>{{ i.recipe_des }}</td>
+
+                <td>
+                    <img src="/media/{{ i.recipe_image }}" style="height: 100px; max-width: 100px;">
+                </td>
+               
+                
+                
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div>
+<h2 class= "home"> Go To Your Homepage</h2> <a href="/recipe/"><h3>Click</h3></a></p>
+</div>
+</body>
+</html>

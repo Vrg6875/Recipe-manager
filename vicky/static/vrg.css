@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../images/mela-header-1024x512.jpg");
+  margin: 0;
+  padding: 0;
+}
+
+
+form {
+  margin-bottom: 10px;
+}
+
+/* Style the input field */
+input[type="text"] {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  font-style: oblique;
+  background-color: #11eb1c;
+  color: rgb(18, 17, 17);
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #9cce9f;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 2px solid #a42d2d;
+}
+
+th {
+  
+  background-color: #101110;
+  color: white;
+}
+td {
+  font-style: italic;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  color: rgb(14, 13, 13);
+}
+
+
+img {
+  display: block;
+  margin: auto;
+}
+
+
+.home {
+  text-align: center;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #11eb1c;
+}
