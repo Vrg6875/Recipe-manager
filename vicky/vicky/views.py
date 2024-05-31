@@ -1,4 +1,4 @@
-#vicky ok
+#vicky ok thik
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,redirect
 
